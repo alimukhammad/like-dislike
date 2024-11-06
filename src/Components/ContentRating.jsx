@@ -28,19 +28,22 @@ class ContentRating extends Component {
   render() {
     return (
       <div className='content-rating'>
+        <h2>New President</h2>
         <p> Trump or Kamala</p>
+
         <div className='rating-buttons'>
 
           {/* call event handlers */}
+          {/*use the state object values*/}
           <button className='like-button' onClick={this.state.handleLike}> 
-            Like ({this.state.likes}) //use the state object values
+            Trump ({this.state.likes})
           </button>
 
           {/* call event handlers */}
+          {/*use the state object values*/}
           <button className='dislike-button' onClick={this.state.handleDislike}>
-            Dislike ({this.state.dislikes}) //use the state object values
+            Kamala ({this.state.dislikes})
           </button>
-          
         </div>
       </div>
     );
