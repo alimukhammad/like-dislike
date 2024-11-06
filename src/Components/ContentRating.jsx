@@ -8,7 +8,20 @@ class ContentRating extends Component {
 
     this.state = {
       likes: 0,
-      dislikes: 0
+      dislikes: 0,
+    
+      handleLike:() =>{ //event handler
+        // increase & decrease
+        this.setState((prevState) => ({
+          likes: prevState.likes + 1
+        }));
+      },
+      handleDislike:() =>{ //event handler
+        // increase & decrease
+        this.setState((prevState) => ({
+          dislikes: prevState.dislikes + 1
+        }));
+      }
     };
 
   }
@@ -17,12 +30,15 @@ class ContentRating extends Component {
       <div className='content-rating'>
         <p> Trump or Kamala</p>
         <div className='rating-buttons'>
+
           <button className='like-button'>
             Like ({this.state.likes}) //use the state object values
           </button>
+
           <button className='dislike-button'>
             Dislike ({this.state.dislikes}) //use the state object values
           </button>
+          
         </div>
       </div>
     );
