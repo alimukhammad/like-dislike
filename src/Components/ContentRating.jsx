@@ -31,11 +31,13 @@ class ContentRating extends Component {
         <p> Trump or Kamala</p>
         <div className='rating-buttons'>
 
-          <button className='like-button'>
+          {/* call event handlers */}
+          <button className='like-button' onClick={this.state.handleLike}> 
             Like ({this.state.likes}) //use the state object values
           </button>
 
-          <button className='dislike-button'>
+          {/* call event handlers */}
+          <button className='dislike-button' onClick={this.state.handleDislike}>
             Dislike ({this.state.dislikes}) //use the state object values
           </button>
           
