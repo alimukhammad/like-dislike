@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './ContentRating.css';
 
 class ContentRating extends Component {
+  // grand child
   constructor() {
     super();
 
